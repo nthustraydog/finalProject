@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 
 import Each from './each_dog';
+import NavHeader from './NavHeader';
 
 import {setID, setEachDisplay} from '../states/all-actions';
 
@@ -75,40 +76,42 @@ class Dogs extends React.Component {
     }
 
     render() {
-        const {navigate} = this.props;
+        const {navigate, goBack} = this.props.navigation;
         const {id, eachdogDisplay} = this.props.id;
         const {fadeOut} = this.state;
-
         const dialogTranslateY = fadeOut.interpolate({
             inputRange: [0, 1],
-            outputRange: [100, -50],
+            outputRange: [100, 0],
             extrapolate: 'clamp'
         });
-
-        console.log(dialogTranslateY);
 
         let dialog;
 
         if(eachdogDisplay) {
-            dialog = (
-              <View style = {styles.dialogWindow}>
-                <TouchableOpacity style = {styles.dialog} onPress = {() => {
-                      this.handleSetDisplay(false);
+          dialog = (
+            <View style = {styles.dialogWindow}>
+              <TouchableOpacity style = {styles.dialog} onPress = {() => {
+                    //this.handleSetDisplay(false);
+                    this.processAnimation();
+                }}>
+              </TouchableOpacity>
 
-                  }}>
-                </TouchableOpacity>
+              <Animated.View style = {[styles.dialogContent, {
+                  opacity: this.state.fadeOut,
+                  transform: [
+                      {
+                          translateY: dialogTranslateY
+                      }
+                  ]
+                }]}>
+                <Each id = {id} navigate = {navigate} adopt = {false}/>
+              </Animated.View>
+            </View>
 
-                <View style = {[styles.dialogContent, {
-
-                  }]}>
-                  <Each id = {id} navigate = {navigate} adopt = {false}/>
-                </View>
-              </View>
-
-            );
+          );
         }
         else dialog = (
-          <ScrollView style = {{opacity: this.state.fadeIn}}>
+          <Animated.ScrollView style={{backgroundColor: 'white', opacity: this.state.fadeIn}}>
             <View style={styles.container}>
                 <View style = {styles.row}>
                   <TouchableHighlight style={[styles.box, styles.box1]} onPress = {() => {
@@ -255,13 +258,14 @@ class Dogs extends React.Component {
                   </TouchableHighlight>
                 </View>
             </View>
-          </ScrollView>
+          </Animated.ScrollView>
         );
 
         return (
-          <View>
+
+          <NavHeader navigate={navigate} goBack={goBack} title='校園狗狗們'>
             {dialog}
-          </View>
+          </NavHeader>
         );
       }
 }
@@ -314,6 +318,7 @@ const styles = StyleSheet.create({
   dialogWindow: {
       flex: 1,
       position: 'absolute',
+      backgroundColor: 'white',
       width: width,
       height: height,
       justifyContent: 'center',
@@ -323,14 +328,14 @@ const styles = StyleSheet.create({
       width: width,
       height: height,
       position: 'absolute',
-      zIndex: 1,
+      zIndex: 10,
       backgroundColor: 'rgba(180,180,180,0.7)',
   },
   dialogContent: {
       width: width*0.95,
       height: height*0.8,
       backgroundColor: 'rgba(255,255,255,1)',
-      zIndex: 2,
+      zIndex: 20,
   }
 });
 

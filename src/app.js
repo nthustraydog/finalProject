@@ -11,7 +11,7 @@ import loggerMiddleware from 'redux-logger';
 import {Provider, connect} from 'react-redux';
 
 
-import All from './components/all_dog';
+import Dogs from './components/Dogs';
 import Adopt from './components/Adopt';
 import AdoptApply from './components/AdoptApply';
 import BathScreen from './components/bath';
@@ -40,7 +40,7 @@ import {StackNavigator, NavigationActions, addNavigationHelpers} from 'react-nav
 
 
 const AppNavigator = StackNavigator({
-    校園狗狗們: {screen: All},
+    校園狗狗們: {screen: Dogs},
     認養: {screen: Adopt},
     認養申請: {screen: AdoptApply},
     事件通報: {screen: EventScreen},
