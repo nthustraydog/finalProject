@@ -471,7 +471,6 @@ class Accomplish extends React.Component {
               </Animated.View>
 
               <View>
-
                 <View style = {styles.accomHeader}>
                   <View style = {styles.pointDisplay}>
                     <Text style = {styles.pointText}>
@@ -490,12 +489,17 @@ class Accomplish extends React.Component {
                   </TouchableOpacity>
                 </View>
 
-                <View style = {{alignSelf: 'center', width: width*0.8}}>
+                <View style = {{
+                    alignSelf: 'center',
+                    width: width *0.8
+                  }}>
                   <Button title = {"掃描"} onPress = {() => {
                         //dispatch(goToCamera());
                         navigate('QRCODE');
-                    }}/>
+                    }} disabled = {this.state.cover}/>
+
                 </View>
+
 
                 <View style={styles.container}>
                     <View style = {styles.row}>
