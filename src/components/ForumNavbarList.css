@@ -1,0 +1,11 @@
+.forum-navbar-list:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .forum-navbar-list .navbar-item {
+        height: 2rem;
+        padding-left: 0.5rem;
+
+    }
+}

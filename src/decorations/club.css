@@ -1,0 +1,82 @@
+h1, h2, h3, h4, h5, h6, p, a{
+	font-family: 微軟正黑體, 標楷體;
+	font-weight: bold;
+}
+.content-wrapper{
+	width: 80%;
+	margin: 0 auto;
+}
+.content-wrapper h1{
+	color: #46006c;
+	margin: 2% 0;
+}
+.content-wrapper p{
+	font-size: 20px;
+	text-align: justify;
+	text-justify:inter-ideograph;
+}
+.activity-record{
+	width: 100%;
+	text-align: center;
+	margin: 2% auto;
+	overflow: auto;
+}
+.items{
+	float: left;
+	width: 14.6666666%;
+	margin: 1%;
+}
+.items img{
+	width: 100%;
+}
+.overlay {
+  position: relative;
+
+}
+.overlay:after {
+  position: absolute;
+  content:"";
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  opacity: 0.5;
+}
+.black:after{
+	background-color: #000000;
+}
+.text-box{
+	z-index: 99;
+	position: absolute;
+	content:"";
+	top: 0;
+	width: 100%;
+}
+.text-box h4{
+	font-size: 18px; /*or whatever you want*/
+	color: #ffffff; 
+	margin : 10px 0;
+}
+
+@media (max-width: 950px){
+	.text-box h4{
+		font-size: 14px;
+	}
+}
+@media (max-width: 768px){
+	.items{
+		width: 23%;
+	}
+}
+@media (max-width: 480px){
+	.content-wrapper h1{
+		font-size: 28px;
+		text-align: center;
+	}
+	.content-wrapper p{
+		font-size: 18px;
+	}
+	.items{
+		width: 31.3333333%;
+	}
+}

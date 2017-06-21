@@ -1,0 +1,142 @@
+h1, h2, h3, h4, h5, h6, p{
+	font-family: 微軟正黑體, 標楷體;
+	font-weight: bold;
+	text-align: justify;
+	text-justify: inter-ideograph;
+}
+
+.content-wrapper{
+		width: 90%;
+		margin: 0 auto;
+		transition: all 0.6s;
+}
+#Mobile{
+	display: none;
+	text-align: center;
+	margin: 5% 0 2% 0;
+}
+#Mobile h1{
+	margin: 0;
+	font-size: 30px;
+	color: #521269;
+}
+#Mobile div{
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 5px;
+}
+
+#Desktop{
+	display: block;
+	overflow: auto;
+}
+#Desktop div{
+	vertical-align: top;
+	margin-right: 5px;
+}
+.basic-infor{
+	width: 100%;
+	padding: 2% 7% 2% 7%;
+	overflow: auto;
+}
+
+#information{
+	overflow: auto;
+	margin-top: 30px;
+}
+#information h2{
+	color: #521269;
+	margin-top: 0;
+}
+.basic-infor p{
+	font-size: 20px;
+	line-height: 32px;
+}
+#information span{
+	color: #744186;
+}
+#information > img{
+	margin: 0 0 0 5%;
+	width: 400px;
+	float: right;
+}
+.story{
+	margin-top: 4%;
+}
+.story h2{
+	color: #744186;
+	font-size: 25px;
+}
+.story p{
+	text-indent: 40px;
+	font-weight: bold;
+}
+.murmur{
+	margin-top: 4%;
+	margin-bottom: 4%;
+	border-radius: 20px;
+	background: #DAC2E4;
+	padding: 2%;
+	display: block;
+	clear: both;
+
+}
+.murmur h2{
+	color: #744186;
+	margin: 0;
+	margin-bottom: 1%;
+	font-size: 25px;
+}
+.murmur p{
+	margin: 0;
+	text-indent: 40px;
+}
+.photo-gallery{
+	width: 100%;
+	text-align: center;
+	overflow: auto;
+}
+.gallery-item{
+	padding: 1%;
+	width: 20%;
+	float: left;
+}
+.gallery-item img{
+	width: 100%;
+	margin: 0;
+}
+
+@media (max-width: 1024px){
+	#information{
+		margin-top: 0;
+	}
+	#Desktop{
+		display: none;
+	}
+	#Mobile{
+		display: block;
+	}
+	#information img{
+		width: 70%;
+		margin-bottom: 5%;
+		float: none;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.gallery-item{
+		width: 25%;
+	}
+}
+@media (max-width: 767px){
+	.gallery-item{
+		width: 33.33333%;
+	}
+
+}
+@media (max-width: 480px){
+	#information img{
+		width: 100%;
+	}
+
+}

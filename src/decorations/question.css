@@ -1,0 +1,41 @@
+.content > div > h2{
+				cursor: pointer;
+				margin-top: 0;
+				margin-bottom: 15px;
+			}
+			.answer{
+				display: none;
+				
+			}
+			.answer p{
+				text-indent: 0;
+			}
+			.question img{
+				float: right;
+				width: 300px;
+				margin-left: 10px;
+			}
+			#Q11{
+				display: none;
+			}
+			#Q11 > .answer{
+				border: 1px dashed #000000;
+				padding: 5px;
+			}
+			#Q11 > .answer > h2{
+				font-size: 23px;
+				text-align: center;
+			}
+			#Q11 > .answer > p{
+				font-size: 18px;
+				text-align: center;
+			}
+
+			@media (max-width: 767px){
+				.question img{
+					width: 60%;
+					float: none;
+					clear: both;
+				}
+				#Q11{display: initial;}
+			}

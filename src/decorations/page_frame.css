@@ -1,0 +1,241 @@
+::selection {
+	background: rgb(82, 18, 105);
+	color: #ffffff;
+}
+::-moz-selection {
+	background: rgb(82, 18, 105);
+	color: #ffffff;
+}
+*{
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html,body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body{
+	width: 100%;
+	background-color: #ffffff;
+}
+.wrapper{
+	width: 100%;
+	min-height: 100%;
+	position: relative;
+}
+.header {
+	background: rgb(255, 255, 255);
+	width: 100%;
+	text-align: center;
+	position: relative;
+}
+.header::after{
+	content: "";
+	display: block;
+	margin: 20px auto 0 auto;
+	width: 90%;
+	height: 3px;
+	background: #D894DB;
+}
+.nav-desktop{
+	background: rgb(255, 255, 255);
+
+	width: 100%;
+	bottom: 0px;
+	text-align: center;
+}
+.nav-desktop .underline{
+	display: inline-block;
+	margin: 10px;
+	margin-bottom: 0;
+	position: relative;
+	vertical-align: bottom;
+}
+.nav-desktop .underline a{
+	text-decoration: none;
+	font-size: 26px;
+	font-weight: 700;
+	font-family: 微軟正黑體, 標楷體;
+	color: rgb(116, 65, 134);
+	padding: 5px;
+}
+.nav-desktop .underline > span{
+	height: 5px;
+	width: 0%;
+	background: rgb(116, 65, 134);
+	position: relative;
+	display: block;
+	margin: 0 auto;
+
+	transition: 0.3s ease-out;
+	-webkit-transition: 0.3s ease-out;
+}
+.nav-desktop .underline:hover  span{
+	width: 100%;
+}
+.nav-desktop .current-page > span{
+	width: 100%;
+}
+
+
+
+.footer{
+	overflow: hidden;
+	width:100%;
+	/*height: 500px;*/
+	text-align: center;
+	background:url('footer.jpg');
+	background-size: cover;
+}
+.footer > p{
+	clear: both;
+	color: #ffffff;
+	text-align: center;
+	font-family: cursive;
+}
+
+.shareContainer{
+
+	margin: 0 auto 50px auto;
+	position: relative;
+	top: 20px;
+}
+
+.share_twitter{
+	position: relative;
+	background: url('twitter_button.png') no-repeat;
+	width: 100px;
+	height: 100px;
+	background-size: 100px 100px;
+	border-radius: 100%;
+	cursor: pointer;
+	margin: 0 auto;
+	margin-top: 10px;
+	display: inline-block;
+}
+.share_twitter:hover{
+	background: url('twitter_button2.png') no-repeat;
+	width: 100px;
+	height: 100px;
+	background-size: 100px 100px;
+}
+
+.share_facebook{
+	position: relative;
+	background: url('facebook_button.png') no-repeat;
+	width: 100px;
+	height: 100px;
+	background-size: 100px 100px;
+	border-radius: 100%;
+	cursor: pointer;
+	margin: 0 auto;
+	margin-top: 10px;
+	display: inline-block;
+}
+.share_facebook:hover{
+	background: url('facebook_button2.png') no-repeat;
+	width: 100px;
+	height: 100px;
+	background-size: 100px 100px;
+}
+
+.share_google{
+	position: relative;
+	background: url('google_plus_button.png') no-repeat;
+	width: 100px;
+	height: 100px;
+	background-size: 100px 100px;
+	border-radius: 100%;
+	cursor: pointer;
+	margin: 0 auto;
+	margin-top: 10px;
+	display: inline-block;
+}
+.share_google:hover{
+	background: url('google_plus_button2.png') no-repeat;
+	width: 100px;
+	height: 100px;
+	background-size: 100px 100px;
+}
+/**************footer**************/
+
+
+#related-link{
+	display: block;
+	width: 90%;
+	position: relative;
+	background: rgba(155, 155, 155, 0.5);
+	margin: 2% auto;
+	vertical-align: top;
+	padding: 2%;
+}
+.link-picture{
+	 width: 15%;
+	 display: inline-block;
+	 cursor: pointer;
+}
+#related-link h1{
+	text-align: center;
+	color: #ffffff;
+	font-family:  華康方圓體W7, 華康特粗楷體, 標楷體;
+	margin: 20px;
+}
+#related-link p{
+	font-size: 20px;
+	font-weight: normal;
+	font-family:  華康方圓體W7, 華康特粗楷體, 標楷體;
+	line-height: 150%;
+	color: #eeeeee;
+	text-align: center;
+	margin: 20px 0;
+	padding: 0;
+}
+
+
+@media (min-width: 1441px){
+	.header{
+		height: 220px;
+	}
+}
+@media (max-width: 1024px){
+	.nav-desktop{
+			display: none;
+	}
+	#hamburger{
+			display: block;
+	}
+	.header{
+		background: rgb(82, 18, 105);
+		height: 160px;
+	}
+	.header::after{
+		display: none;
+	}
+}
+@media (max-width: 767px){
+	#related-link h1{
+		font-size: 25px;
+	}
+	.link-picture{
+		width: 20%;
+		display: inline-block;
+		cursor: pointer;
+	}
+	.header{
+		height: 150px;
+	}
+}
+
+@media (max-width: 479px){
+	#related-link h1{
+		font-size: 20px;
+	}
+	.link-picture{
+		width: 45%;
+	}
+	.header{
+		height: 130px;
+	}
+}

@@ -1,0 +1,93 @@
+h1, h2, h3, h4, h5, h6, p{
+	font-family: 微軟正黑體, 標楷體;
+	text-align: justify;
+	text-justify:inter-ideograph;
+	font-weight: bold;
+}
+
+#introduction{
+	width: 90%;
+	margin: 5% auto;
+	text-align: center;
+	overflow: auto;
+}
+.content{
+	float: left;
+	width: 60%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.content h1{
+	margin-top: 0;
+	margin-bottom: 15px;
+	text-align: left;
+	color: #3b1a49;
+}
+.content h2{
+	color: #46006c;
+	font-size: 20px;
+}
+.content p{
+	font-size: 20px;
+	text-indent: 40px;
+}
+.other-infor{
+	float: left;
+	margin-left: 5%;
+	width: 20%;
+	max-width: 500px;
+	vertical-align: top;
+}
+#logo, #link{
+	position: relative;
+	margin-bottom: 10%;
+	background: rgb(186, 160, 205);
+	width: 100%;
+}
+#logo{height: 150px;}
+#link{}
+#donate{
+	position: relative;
+	margin-bottom: 5px;
+	padding: 5%;
+	background: rgb(217, 203, 226);
+	width: 100%;
+	text-align: left;
+}
+
+#link h1, #donate h1{
+	color: #554164;
+	font-size: 30px;
+	font-weight: bold;
+	position: relative;
+	left: 0;
+}
+#donate h1{
+	color: #3E3546;
+}
+#donate h2{
+	color: #473B4F;
+	font-size: 10px;
+}
+#donate p{
+	color: #473B4F;
+	margin-bottom: 6px;
+
+	font-size: 10px;
+}
+
+
+#related-link h1{
+	text-align: center;
+	font-weight: normal;
+}
+@media (max-width: 1024px){
+	.content{
+		float: none;
+		margin: 0 auto;
+		width: 100%;
+	}
+	#logo, #link, #donate{
+		display: none;
+	}
+}

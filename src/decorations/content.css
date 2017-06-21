@@ -1,0 +1,53 @@
+.content{
+	margin: 20px auto;
+	border: 10px solid #E6C199;
+	width: 95%;
+	background: #DEB27C;
+}
+.intro-tag{
+	display: inline-block;
+	width: auto;
+	margin: 20px 30px 0 30px;
+	padding: 10px;
+	background: #774A28;
+	border-radius: 20px; 
+	font-size: 40px;
+	font-weight: bold;
+	color: #ECDBC6;
+}
+.intro-content{
+	text-align: justify;
+	text-justify: inter-ideograph;
+	margin: 20px 50px;
+}
+/*club purpose*/
+#club-cover{
+	display: inline-block;
+	float: right;
+	background: url('10795_0.png');
+	background-size: cover;
+	width:320px;
+	height: 320px;
+}
+#club-cover img{
+	position: relative;
+	top: 25%;
+	left: 12%;
+	transform: rotate(-3deg);
+	width: 240px;
+}
+#purpose-content{
+	font-size: 30px; 
+	font-weight: bold;
+}
+
+/*what's care life doing?*/
+#club-do ~ h2{
+	margin: 10px 50px;
+	border-left: 5px solid #ff0000;
+	padding: 10px;
+	font-size: 32px;
+}
+#club-do  ~ .intro-content{
+	font-size: 25px;
+}
