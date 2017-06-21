@@ -1,8 +1,0 @@
-.forum-navbar-item {
-}
-
-@media (max-width: 768px) {
-    .forum-navbar-item {
-        width: 5rem;
-    }
-}
