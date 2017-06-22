@@ -44,3 +44,13 @@ export function getAccomplish(loading) {
           }, 1000);
     };
 }
+export function enterHome(loading) {
+    return (dispatch, getState) => {
+        if(!loading)
+          dispatch(startLoading());
+
+          setTimeout(() => {
+              dispatch(endLoading());
+          }, 1000);
+    };
+}

@@ -27,6 +27,7 @@ import HomeScreen from './components/HomeScreen';
 import ForumScreen from './components/ForumScreen';
 import PostScreen from './components/PostScreen';
 import PostFormScreen from './components/PostFormScreen';
+import StartAnimation from './components/StartAnimation';
 
 import {toggleNavbar} from './states/main-actions';
 import {setID} from './states/all-actions';
@@ -55,6 +56,7 @@ const AppNavigator = StackNavigator({
     Forum: {screen: ForumScreen}, // 9
     Post: {screen: PostScreen},
     PostForm: {screen: PostFormScreen},
+    start: {screen: StartAnimation}
 }, {
     headerMode: 'none'
 });
@@ -97,7 +99,7 @@ const AppWithNavState = connect(state => ({
 }))(AppWithStyleAndNavigator);
 
 // Nav reducer
-const initialState = AppNavigator.router.getStateForAction(NavigationActions.navigate({routeName: 'Home'}));
+const initialState = AppNavigator.router.getStateForAction(NavigationActions.navigate({routeName: 'start'}));
 const nav = (state = initialState, action) => {
     const nextState = AppNavigator.router.getStateForAction(action, state);
     return nextState || state;

@@ -1,5 +1,5 @@
 import {AsyncStorage} from 'react-native';
-const postBaseUrl = 'http://192.168.0.102:8080/api';
+const postBaseUrl = 'http://172.20.139.176:8080/api';
 //const postBaseUrl = 'http://nthustraydog.us-west-2.elasticbeanstalk.com/api';
 const initialUser = {
   point: 0,
