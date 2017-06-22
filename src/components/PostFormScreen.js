@@ -37,7 +37,7 @@ class PostFormScreen extends React.Component {
         const {title, titleError, titleSuccess, content, contentError, contentSuccess} = this.state;
         return (
             <NavHeader navigate={navigate} goBack={goBack} title='浪嚎一發'>
-                <ScrollView>
+                <ScrollView style={{backgroundColor: 'rgba(235, 235, 235, 0.5)'}}>
                 <View style={styles.header}>
                     <View style={styles.leftContainer}>{
                         (dogID == 1)? <Image source={require('../images/dog-1.png')} style={styles.left}/>:

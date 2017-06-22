@@ -32,10 +32,11 @@ class PublicScreen extends React.Component {
 
       <NavHeader navigate={navigate} goBack={goBack} title='重要宣導'>
         <ScrollView>
-        <View>
-        <View style={{backgroundColor:'rgb(55, 152, 232)', margin:20}}>
+        <View >
+        <View style={{backgroundColor:'rgb(55, 152, 232)', marginTop:20,marginLeft:20,marginRight:20 , borderTopRightRadius:10 , borderTopLeftRadius:10}}>
         <Text style={{color:'white' , fontSize:27}}>  不可在餐廳與室內餵食</Text>
         </View>
+        <View style={{backgroundColor:'white', marginLeft:20,marginRight:20}}>
         <Text style={{marginLeft:20 , marginRight:20 , fontSize:17 , color:'black'}}>
         <Text style={{marginLeft:20 , marginRight:20 , fontSize:17 , color:'red'}}>
           清大校園內，是禁止在餐廳、室內餵食狗狗的喔！
@@ -46,10 +47,11 @@ class PublicScreen extends React.Component {
         人類的食物過油過鹹，對狗狗的身體是非常大的負擔，
         狗狗無法分辨什麼食物對自身有害，這點還要讓我們人類來為牠們的健康把關囉！
         </Text>
-
-        <View style={{backgroundColor:'rgb(18, 147, 240)', margin:20}}>
+        </View>
+        <View style={{backgroundColor:'rgb(18, 147, 240)', marginTop:20,marginLeft:20,marginRight:20 , borderTopRightRadius:10 , borderTopLeftRadius:10}}>
         <Text style={{color:'white' , fontSize:27}}>  不可以餵狗吃骨頭！！！</Text>
         </View>
+          <View style={{backgroundColor:'white', marginLeft:20,marginRight:20}}>
         <Text style={{marginLeft:20 , marginRight:20 , fontSize:17 , color:'black'}}>
         <Text style={{marginLeft:20 , marginRight:20 , fontSize:17 , color:'red'}}>
           千萬不要給狗狗吃骨頭喔！無論是雞骨、豬骨、牛骨都不可以！
@@ -69,17 +71,18 @@ class PublicScreen extends React.Component {
         若是想要餵狗狗吃東西，可以去便利商店買罐頭喔！
         他們會很愛你的！
         </Text>
-
-        <View style={{backgroundColor:'rgb(31, 125, 250)', margin:20}}>
+        </View>
+        <View style={{backgroundColor:'rgb(31, 125, 250)',marginTop:20,marginLeft:20,marginRight:20, borderTopRightRadius:10 , borderTopLeftRadius:10}}>
         <Text style={{color:'white' , fontSize:27}}>  狗狗的肢體語言與安定訊號</Text>
         </View>
+          <View style={{backgroundColor:'white', marginLeft:20,marginRight:20}}>
         <Text style={{marginLeft:20 , marginRight:20 , fontSize:17 , color:'black'}}>
           遇見狗的時候，雖然會想要跟牠接觸，
           但有的時候如果方法弄錯了，
           可能會使狗狗感到焦慮。安定訊號就相當於狗狗之間通用的肢體語言，
           如果學會了安定訊號，就可以知道如何適當的安撫狗狗的情緒。{"\n"}{"\n"}
         </Text>
-
+        </View>
         <TouchableOpacity onPress={() => Linking.openURL('http://my.nthu.edu.tw/~srv9215/carelife2013/4-1calmingsignals.htm')}>
           <Text style={{marginLeft:20 , marginRight:20 , fontSize:17 , color:'red'}}>
             想知道更多關於安定訊號的知識：

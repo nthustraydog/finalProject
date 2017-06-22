@@ -1,5 +1,5 @@
 // Develop server URL
-const baseUrl = 'http://192.168.0.102:8080/api';
+const baseUrl = 'http://nthustraydog.us-west-2.elasticbeanstalk.com/api';
 
 //AWS
 // const baseUrl = 'http://nthustraydog.us-west-2.elasticbeanstalk.com/api';

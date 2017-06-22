@@ -108,8 +108,8 @@ export default class EventScreen extends React.Component {
 
                   </ScrollView>
 
-                  <Button style={{backgroundColor: 'yellow'}} textStyle={{fontSize: 18}} onPress={this.handleSubmit}>
-                      <Icon name='email' style={{margin:'auto'}}>通報</Icon>
+                  <Button style={{backgroundColor: 'yellow'}} textStyle={{fontSize:20 , color:'black'}} onPress={this.handleSubmit}>
+                      通報
                   </Button>
                     <Popup ref={popup => this.popup = popup }/>
               </View>
